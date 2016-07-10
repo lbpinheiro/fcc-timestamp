@@ -1,0 +1,27 @@
+{
+  "name": "timestamp",
+  "version": "1.0.0",
+  "description": "Timestamp Microservice, required for Back End Development Certification",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbpinheiro/fcc-timestamp.git"
+  },
+  "keywords": [
+    "freecodecamp",
+    "api",
+    "node"
+  ],
+  "author": "Lucas Batochi Pinheiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lbpinheiro/fcc-timestamp/issues"
+  },
+  "homepage": "https://github.com/lbpinheiro/fcc-timestamp#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
