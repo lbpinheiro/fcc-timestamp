@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/lbpinheiro/fcc-timestamp#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "less-middleware": "^2.2.0",
+    "path": "^0.12.7"
   }
 }

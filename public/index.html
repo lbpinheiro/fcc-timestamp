@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Timestamp API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/skeleton.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="icon" type="image/png" href="../../dist/images/favicon.png">
+  </head>
+  <body class="timeStampApi">
+
+    <div class="container">
+      <div class="ten columns">
+        <div class="center-text row">
+          <h1>Timestamp API</h1>
+          <p>A <a href="https://www.freecodecamp.com/challenges/timestamp-microservice">FreeCodeCamp</a> exercise</p>
+        </div>
+        <div class="row shiftDown">
+          <table class="u-full-width" id="usageTable">
+            <thead>
+              <tr>
+                <th>Route</th>
+                <th>HTTP Verb</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>/</th>
+                <th>GET</th>
+                <th>shows this page :)</th>
+              </tr>
+              <tr>
+                <th>/:timestamp</th>
+                <th>GET</th>
+                <th>process :timestamp and returns a JSON</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row">
+          <pre><code id="jsonSpecification" class="prettyprint">
+  /* Returning JSON */
+  {
+    unix: [string],    //unix timestamp
+    natural: [string]  //natural language date
+  }
+          </code></pre>
+        </div>
+
+        <div class="row">
+          <h2>Example usage</h2>
+          <p class="shiftRight"><code>https://timestamp-ms.herokuapp.com/December%2015,%202015</code></p>
+          <p class="shiftRight"><code>https://timestamp-ms.herokuapp.com/1450137600</code></p>
+        </div>
+        <div class="row shiftDown">
+          <h2>Example output</h2>
+          <p class="shiftRight"><code>{ "unix": 1450137600, "natural": "December 15, 2015" }</code></p>   
+        </div>
+
+        <div class="row center-text">
+          <hr/>
+          <p><a href="https://twitter.com/lucasdesenv">Lucas B. Pinheiro</a> 2016</p>
+          <p>This code is on Github <a href="https://github.com/lbpinheiro/fcc-timestamp">
+<img border="0" alt="Github logo" src="GitHub-Mark-32px.png">
+</a></p>
+        </div>
+
+      </div>
+
+
+
+      
+    </div>
+  
+
+    <!--used in <pre><code> https://github.com/google/code-prettify-->
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script>
+    </script>
+  </body>
+</html>
