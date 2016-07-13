@@ -12,12 +12,27 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.get('/*', function (req, res) {
   if (req.originalUrl === '/') {
     res.sendFile('index.html');
-
+  } else {
+    res.send('Hello World! ' + req.originalUrl);
   }
-  res.send('Hello World! ' + req.originalUrl);
-  console.log(req);
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+app.listen(process.env.PORT || 3000, function () {
+  console.log('listening on port 3000!');
 });
