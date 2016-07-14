@@ -1,37 +1,26 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
+var favicon = require('serve-favicon');
+
+var api = require('./timestamp');
 
 var app = express();
 
+app.use(favicon(path.join(__dirname,'public', 'favicon.ico')));
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'hjs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/*', function (req, res) {
-  if (req.originalUrl === '/') {
+  console.log('url=' + req.url);
+  if (req.url === '/') {
     res.sendFile('index.html');
   } else {
-    res.send('Hello World! ' + req.originalUrl);
+    res.send(api(req.url));
   }
 });
-
-function normalizePort(val) {
-  var port = parseInt(val, 10);
-
-  if (isNaN(port)) {
-    // named pipe
-    return val;
-  }
-
-  if (port >= 0) {
-    // port number
-    return port;
-  }
-
-  return false;
-}
 
 app.listen(process.env.PORT || 3000, function () {
   console.log('listening on port 3000!');
