@@ -1,5 +1,5 @@
 {
-  "name": "timestamp",
+  "name": "fcc-timestamp",
   "version": "1.0.0",
   "description": "Timestamp Microservice, required for Back End Development Certification",
   "main": "server.js",
