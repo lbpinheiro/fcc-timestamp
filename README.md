@@ -7,9 +7,9 @@ A [FreeCodeCamp](https://www.freecodecamp.com/challenges/timestamp-microservice)
 * If it does, it returns both the Unix timestamp and the natural language form of that date.
 * If it does not contain a date or Unix timestamp, it returns null for those properties.
 
-### Live site
+### Live website
 
-[https://fcc-timestampapi.herokuapp.com](https://fcc-timestampapi.herokuapp.com)
+https://fcc-timestampapi.herokuapp.com
 
 ## Some examples
 
